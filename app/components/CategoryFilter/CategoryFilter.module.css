@@ -1,0 +1,134 @@
+.categorySection {
+    padding: 100px 0;
+    background: linear-gradient(to bottom, #000 0%, #0a0a0a 100%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+    color: var(--color-white);
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.categoryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.categoryCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 28px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.categoryCard:hover {
+    background: rgba(212, 175, 55, 0.05);
+    border-color: var(--color-gold);
+    transform: translateY(-4px);
+}
+
+.categoryContent {
+    flex: 1;
+}
+
+.categoryName {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-white);
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.categoryCount {
+    font-size: 0.95rem;
+    color: var(--color-gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.arrow {
+    font-size: 2rem;
+    color: var(--color-gold);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.categoryCard:hover .arrow {
+    opacity: 1;
+    transform: translateX(8px);
+}
+
+@media (max-width: 768px) {
+    .categorySection {
+        padding: 60px 0;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .categoryGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        overflow-x: visible;
+        padding-bottom: 0;
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    .categoryCard {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 16px;
+        gap: 8px;
+    }
+
+    .categoryContent {
+        width: 100%;
+    }
+
+    .categoryName {
+        font-size: 1.1rem;
+        margin-bottom: 4px;
+        word-break: break-word;
+        /* Prevent overflow */
+    }
+
+    .categoryCount {
+        font-size: 0.8rem;
+    }
+
+    .arrow {
+        display: none;
+        /* Save space on mobile */
+    }
+}

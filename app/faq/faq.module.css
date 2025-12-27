@@ -1,0 +1,154 @@
+.faqContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 120px 20px 80px;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: var(--color-white);
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.faqSections {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.faqSection {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 48px;
+}
+
+.faqSection:last-child {
+    border-bottom: none;
+}
+
+.categoryTitle {
+    font-size: 2rem;
+    color: var(--color-gold);
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.questions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faqItem {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.question {
+    width: 100%;
+    padding: 20px 24px;
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: 1.1rem;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.question:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: var(--color-gold);
+    font-weight: 300;
+}
+
+.answer {
+    padding: 0 24px 24px;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.answer p {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.8;
+}
+
+.contactSection {
+    margin-top: 80px;
+    padding: 40px;
+    background: rgba(212, 175, 55, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 4px;
+    text-align: center;
+}
+
+.contactSection h2 {
+    font-size: 1.8rem;
+    color: var(--color-white);
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.contactSection p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contactSection a {
+    color: var(--color-gold);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contactSection a:hover {
+    color: var(--color-gold-light);
+}
+
+@media (max-width: 768px) {
+    .faqContainer {
+        padding: 100px 20px 60px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .categoryTitle {
+        font-size: 1.5rem;
+    }
+
+    .question {
+        font-size: 1rem;
+        padding: 16px 20px;
+    }
+}

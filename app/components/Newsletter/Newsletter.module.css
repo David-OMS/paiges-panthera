@@ -1,0 +1,122 @@
+.newsletter {
+    padding: 100px 0;
+    background: radial-gradient(ellipse at center, #1a1a1a 0%, #000 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--color-gold), transparent);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--color-white);
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.form {
+    display: flex;
+    gap: 12px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.input {
+    flex: 1;
+    padding: 16px 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: var(--color-white);
+    font-size: 1rem;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--color-gold);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.button {
+    padding: 16px 32px;
+    background: var(--color-gold);
+    color: #000;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.button:hover {
+    background: var(--color-gold-light);
+    transform: translateY(-2px);
+}
+
+.successMessage {
+    margin-top: 20px;
+    color: var(--color-gold);
+    font-size: 1rem;
+}
+
+.errorMessage {
+    margin-top: 20px;
+    color: #ff6b6b;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .newsletter {
+        padding: 60px 0;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .form {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+    }
+}

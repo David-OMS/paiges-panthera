@@ -1,0 +1,83 @@
+.confirmationContainer {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 80px;
+    text-align: center;
+}
+
+.successIcon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--color-gold);
+    color: #000;
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    animation: scaleIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: var(--color-white);
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: var(--color-gold);
+    margin-bottom: 48px;
+}
+
+.orderDetails {
+    max-width: 600px;
+    margin-bottom: 48px;
+}
+
+.orderNumber {
+    font-size: 1.2rem;
+    color: var(--color-white);
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.message {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.8;
+}
+
+.actions {
+    display: flex;
+    gap: 16px;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .actions {
+        flex-direction: column;
+        width: 100%;
+    }
+}

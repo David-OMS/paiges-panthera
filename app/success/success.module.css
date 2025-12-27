@@ -1,0 +1,28 @@
+.successContainer {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    max-width: 600px;
+}
+
+.title {
+    font-size: 3rem;
+    color: var(--color-gold);
+    margin-bottom: 24px;
+    font-family: 'Cinzel', serif;
+}
+
+.message {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+    line-height: 1.6;
+}

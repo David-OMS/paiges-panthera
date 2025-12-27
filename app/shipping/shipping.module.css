@@ -1,0 +1,76 @@
+.pageContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 120px 20px 80px;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: var(--color-white);
+    margin-bottom: 60px;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+.section {
+    margin-bottom: 60px;
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: var(--color-gold);
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.section h3 {
+    font-size: 1.3rem;
+    color: var(--color-white);
+    margin: 32px 0 16px;
+    font-weight: 500;
+}
+
+.section p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.section ul,
+.section ol {
+    margin: 16px 0;
+    padding-left: 24px;
+}
+
+.section li {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.section a {
+    color: var(--color-gold);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.section a:hover {
+    color: var(--color-gold-light);
+}
+
+@media (max-width: 768px) {
+    .pageContainer {
+        padding: 100px 20px 60px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+}

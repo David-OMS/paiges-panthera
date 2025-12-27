@@ -1,0 +1,137 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 1;
+}
+
+.inkContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.inkSpot {
+    position: absolute;
+    border-radius: 45% 55% 52% 48% / 48% 45% 55% 52%;
+    background: radial-gradient(ellipse at 30% 30%, var(--color-gold-light), var(--color-gold) 40%, var(--color-gold-dark));
+    opacity: 0;
+    transform-origin: center center;
+    animation: inkBleed 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    filter: blur(1px);
+}
+
+/* Create organic ink bleed effect */
+@keyframes inkBleed {
+    0% {
+        opacity: 0;
+        transform: scale(0) rotate(var(--rotation, 0deg));
+        filter: blur(10px);
+    }
+
+    15% {
+        opacity: 0.3;
+        filter: blur(8px);
+    }
+
+    40% {
+        opacity: 0.5;
+        transform: scale(0.6) rotate(var(--rotation, 0deg));
+        filter: blur(4px);
+    }
+
+    70% {
+        opacity: 0.25;
+        transform: scale(1) rotate(var(--rotation, 0deg));
+        filter: blur(2px);
+    }
+
+    100% {
+        opacity: 0.15;
+        transform: scale(1.1) rotate(var(--rotation, 0deg));
+        filter: blur(1px);
+    }
+}
+
+/* Overlay the gradient on TOP of the pattern */
+.gradientBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.95) 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.title {
+    font-size: 6rem;
+    line-height: 0.9;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.8);
+    animation: fadeUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 1.5s backwards;
+    font-weight: 500;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 48px;
+    opacity: 1;
+    animation: fadeUp 1s ease-out 2s backwards;
+    color: var(--color-white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    animation: fadeUp 1s ease-out 2.5s backwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+}

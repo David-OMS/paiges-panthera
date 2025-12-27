@@ -1,0 +1,269 @@
+.shopHero {
+    padding: 120px 20px 80px;
+    background: linear-gradient(to bottom, #000 0%, #0a0a0a 100%);
+    text-align: center;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.heroContent {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--color-white);
+    margin-bottom: 16px;
+    letter-spacing: -2px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--color-gold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.shopContainer {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 60px;
+}
+
+.filters {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.mobileFilterBtn,
+.mobileFilterHeader {
+    display: none;
+}
+
+.filterTitle {
+    font-size: 1.5rem;
+    color: var(--color-white);
+    margin-bottom: 32px;
+    font-weight: 500;
+}
+
+.filterGroup {
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.filterGroup:last-child {
+    border-bottom: none;
+}
+
+.filterLabel {
+    font-size: 1rem;
+    color: var(--color-gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.filterOption {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.filterOption:hover {
+    color: var(--color-white);
+}
+
+.filterOption input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--color-gold);
+}
+
+.productsSection {
+    min-height: 600px;
+}
+
+.sortBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.activeFilters {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.resultCount {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+}
+
+.clearBtn {
+    background: transparent;
+    border: 1px solid var(--color-gold);
+    color: var(--color-gold);
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.clearBtn:hover {
+    background: var(--color-gold);
+    color: #000;
+}
+
+.sortSelect {
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: var(--color-white);
+    font-size: 0.95rem;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.sortSelect:focus {
+    outline: none;
+    border-color: var(--color-gold);
+}
+
+.sortSelect option {
+    background-color: white;
+    color: black;
+}
+
+
+
+@media (max-width: 1024px) {
+    .shopContainer {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        position: relative;
+    }
+
+    .mobileFilterBtn {
+        display: block;
+        width: 100%;
+        padding: 16px;
+        background: transparent;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        color: var(--color-gold);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 24px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .mobileFilterBtn:hover {
+        background: rgba(212, 175, 55, 0.1);
+        border-color: var(--color-gold);
+    }
+
+    .filters {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 85vh;
+        background: #0a0a0a;
+        padding: 24px;
+        z-index: 2000;
+        transform: translateY(100%);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        border-top: 1px solid var(--color-gold);
+        overflow-y: auto;
+        box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .filters.mobileFiltersOpen {
+        transform: translateY(0);
+    }
+
+    .backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(4px);
+        z-index: 1999;
+        animation: fadeIn 0.3s ease;
+    }
+
+    .mobileFilterHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 32px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 16px;
+    }
+
+    .mobileFilterHeader h3 {
+        font-size: 1.5rem;
+        color: var(--color-white);
+        margin: 0;
+    }
+
+    .closeFilterBtn {
+        background: none;
+        border: none;
+        color: var(--color-white);
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 8px;
+    }
+
+    /* Hide desktop title in drawer if we have header */
+    .filterTitle {
+        display: none;
+    }
+
+    .filterGroup {
+        display: block;
+        /* Stack vertically in drawer */
+        margin-bottom: 24px;
+    }
+
+    .filterLabel {
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .shopHero {
+        padding: 100px 20px 60px;
+    }
+
+    .shopContainer {
+        padding: 40px 20px;
+    }
+}

@@ -1,0 +1,241 @@
+.checkoutContainer {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 120px 20px 80px;
+}
+
+.header {
+    margin-bottom: 60px;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--color-white);
+    margin-bottom: 32px;
+    letter-spacing: -1px;
+}
+
+.steps {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.stepIndicator {
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.stepIndicator.active {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+}
+
+.checkoutLayout {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 60px;
+}
+
+.formSection {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 4px;
+}
+
+.stepTitle {
+    font-size: 1.8rem;
+    color: var(--color-white);
+    margin-bottom: 32px;
+    font-weight: 500;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.input {
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: var(--color-white);
+    font-size: 1rem;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.input.fullWidth {
+    grid-column: 1 / -1;
+}
+
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--color-gold);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.formActions {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+    margin-top: 40px;
+}
+
+.reviewSection {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.reviewGroup h3 {
+    font-size: 1.2rem;
+    color: var(--color-gold);
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.reviewGroup p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+}
+
+.orderSummary {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 32px;
+    border-radius: 4px;
+}
+
+.summaryTitle {
+    font-size: 1.5rem;
+    color: var(--color-white);
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.summaryItems {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.summaryItem {
+    display: grid;
+    grid-template-columns: 60px 1fr auto;
+    gap: 12px;
+    align-items: center;
+}
+
+.summaryItem img {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.itemName {
+    font-size: 0.95rem;
+    color: var(--color-white);
+    margin-bottom: 4px;
+}
+
+.itemDetails {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.itemPrice {
+    font-size: 1rem;
+    color: var(--color-gold);
+    font-weight: 500;
+}
+
+.summaryTotals {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.summaryRow {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+}
+
+.summaryTotal {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    margin-top: 16px;
+    border-top: 2px solid var(--color-gold);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+.emptyCheckout {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.emptyCheckout h1 {
+    font-size: 3rem;
+    color: var(--color-white);
+}
+
+@media (max-width: 1024px) {
+    .checkoutLayout {
+        grid-template-columns: 1fr;
+    }
+
+    .orderSummary {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .checkoutContainer {
+        padding: 100px 20px 60px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .steps {
+        flex-direction: column;
+    }
+
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .formSection {
+        padding: 24px;
+    }
+}
