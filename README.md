@@ -2,10 +2,8 @@
 
 A high-end, luxury fashion e-commerce platform built with modern web technologies. Focuses on premium aesthetics, seamless user experience, and secure payments.
 
-## 🌟 Features
+##  Features
 
-*   **Premium Design**: Custom glassmorphism UI, gold-accented typography, and smooth animations.
-*   **Dynamic Home Page**: Best Sellers carousel, curated collections, and responsive layout.
 *   **E-commerce Functionality**:
     *   Product catalog with filtering and search.
     *   Shopping cart with persistent state.
@@ -13,7 +11,7 @@ A high-end, luxury fashion e-commerce platform built with modern web technologie
 *   **Secure Checkout**: Integrated **Stripe** payment gateway for secure transaction processing.
 *   **Mobile Optimized**: Fully responsive design with touch-friendly sliders and navigation.
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 *   **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
 *   **Language**: TypeScript
@@ -21,7 +19,7 @@ A high-end, luxury fashion e-commerce platform built with modern web technologie
 *   **Payments**: [Stripe](https://stripe.com/)
 *   **Deployment**: Vercel
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -55,7 +53,7 @@ A high-end, luxury fashion e-commerce platform built with modern web technologie
 
     Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-## 📦 Build & Deploy
+##  Build & Deploy
 
 To create a production build:
 
